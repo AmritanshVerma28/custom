@@ -21,3 +21,11 @@ def load(file_path):
         data = pickle.load(file)
         print(f'The type of the data is: {type(data)}')
         return data
+
+def concater(dfs,axis=1):
+    dfs_new = []
+    for df in dfs:
+        df.reset_index(inplace=True,drop=True)
+        dfs_new.append(df)
+    op = pd.concat(dfs_new,axis=1)
+    return op
