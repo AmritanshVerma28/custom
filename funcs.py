@@ -27,5 +27,5 @@ def concater(dfs,axis=1):
     for df in dfs:
         df.reset_index(inplace=True,drop=True)
         dfs_new.append(df)
-    op = pd.concat(dfs_new,axis=1)
+    op = pd.concat(dfs_new,axis=axis)
     return op
