@@ -29,3 +29,12 @@ def concater(dfs,axis=1):
         dfs_new.append(df)
     op = pd.concat(dfs_new,axis=axis)
     return op
+
+def p(*ks,print_it=1,delimiter=", "):
+    s = ""
+    for k in ks:
+        s=s+delimiter+str(k)
+
+    s = s[len(delimiter):]
+    if print_it:
+        print(s)
