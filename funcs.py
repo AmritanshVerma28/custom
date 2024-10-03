@@ -38,3 +38,14 @@ def p(*ks,print_it=1,delimiter=", "):
     s = s[len(delimiter):]
     if print_it:
         print(s)
+
+
+def get_variable_name(var):
+    for name, value in globals().items():
+        if value is var:
+            return name
+    return None
+
+my_variable = 42
+print(get_variable_name(my_variable))  # Output: my_variable
+
